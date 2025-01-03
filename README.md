@@ -72,7 +72,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 npm install -g create-react-app
 npx create-react-app my-app
 
-cd my-app
+npm i
 
 npm start
 
