@@ -74,6 +74,8 @@ npx create-react-app my-app
 
 npm i
 
+cd camasy-react-my
+
 npm start
 
 <!--если ошибка то установить  web-vitals в devDependencies -->
