@@ -13,7 +13,7 @@ function Post(props) {
       <div className={s.descr}>
         <div>{props.name}</div>
         <span>like</span>
-        <div> {props.count}</div>
+        {props.count}
       </div>
     </div>
   );

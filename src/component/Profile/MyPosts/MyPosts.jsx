@@ -13,8 +13,8 @@ function MyPosts() {
         <button>Remove</button>
       </div>
       <div className={s.posts}>
-        <Post name="QQ" count="9" message="Hi, how are you" />
-        <Post name="RR" count="5" message="It's, my first are message" />
+        <Post name="QQ" count="4" message="Hi, how are you" />
+        <Post name="RR" count="53" message="It's, my first are message" />
       </div>
     </div>
   );
