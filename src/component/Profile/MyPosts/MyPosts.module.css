@@ -1,0 +1,12 @@
+.posts {
+  margin: 5px 10px;
+}
+.cart {
+  display: flex;
+  align-items: center;
+}
+button {
+  margin-left: 5px;
+  padding: 3px 6px;
+  cursor: pointer;
+}

@@ -8,7 +8,7 @@ function Profile() {
       <div className="">
         <img src="https://azur.ru/data/newfotos1/big/60/157960.jpg" alt="" />
       </div>
-      <div className="">ava +descr</div>
+      <div className={s.descr}>AAAAAVVa +descr</div>
       <MyPosts />
     </div>
   );

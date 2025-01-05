@@ -1,16 +1,19 @@
 import React from "react";
 import s from "./Post.module.css";
 
-function Post() {
+function Post(props) {
   return (
     <div className={s.item}>
       <img
         src="https://opis-cdn.tinkoffjournal.ru/mercury/m-o-avatar2.nakfqy..jpg"
         alt="img"
       />
-      post 1
-      <div>
+      {props.message}
+
+      <div className={s.descr}>
+        <div>{props.name}</div>
         <span>like</span>
+        <div> {props.count}</div>
       </div>
     </div>
   );
