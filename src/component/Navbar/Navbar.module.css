@@ -1,7 +1,17 @@
 .nav {
+  padding: 20px;
   grid-area: n;
   background-color: #d3aa38;
 }
 .item {
-  color: rgb(249, 249, 250);
+  padding: 5px;
+}
+.item a {
+  color: rgb(250, 250, 250);
+  text-decoration: none;
+}
+.item a:active,
+.item a:hover,
+.item a:focus {
+  color: red;
 }

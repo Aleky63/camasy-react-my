@@ -1,24 +1,25 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
+import { Link } from "react-router-dom";
 import s from "./Navbar.module.css";
 
 function Navbar() {
   return (
     <nav className={s.nav}>
       <div className={s.item}>
-        <a href="/profile">Profile</a>
+        <Link to="/profile">Profile</Link>
       </div>
       <div className={s.item}>
-        <a href="/dialogs">Messages</a>
+        <Link to="/dialogs">Messages</Link>
       </div>
       <div className={s.item}>
-        <a href="/news">News</a>
+        <Link to="/news">News</Link>
       </div>
       <div className={s.item}>
-        <a href="/music">Music</a>
+        <Link to="/music">Music</Link>
       </div>
       <div className={s.item}>
-        <a href="/settings">Settings</a>
+        <Link to="/settings">Settings</Link>
       </div>
     </nav>
   );
