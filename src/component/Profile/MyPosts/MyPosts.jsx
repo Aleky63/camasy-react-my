@@ -17,7 +17,22 @@ function MyPosts() {
       message: "It's, my first are messagesss",
       likesCount: 251,
     },
+    {
+      name: "MMM _",
+      id: 3,
+      message: "It's, my first are mess",
+      likesCount: 51,
+    },
   ];
+
+  let postsElements = postData.map((post) => (
+    <Post
+      name={post.name}
+      likesCount={post.likesCount}
+      message={post.message}
+    />
+  ));
+
   return (
     <div className={s.posts}>
       <h3>My posts</h3>
@@ -26,18 +41,7 @@ function MyPosts() {
         <button>Add post</button>
         <button>Remove</button>
       </div>
-      <div className={s.posts}>
-        <Post
-          name={postData[0].name}
-          likesCount={postData[0].likesCount}
-          message={postData[0].message}
-        />
-        <Post
-          name={postData[1].name}
-          likesCount={postData[1].likesCount}
-          message={postData[1].message}
-        />
-      </div>
+      <div className={s.posts}>{postsElements}</div>
     </div>
   );
 }
