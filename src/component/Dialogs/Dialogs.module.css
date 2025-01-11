@@ -3,16 +3,17 @@
 }
 
 .dialogs {
+  padding: 10px;
   display: grid;
   grid-template-columns: 3fr 9fr;
 }
 .dialogsItems {
-  padding: 10px;
+  padding-left: 20px;
 }
 .dialogsItems .active {
   color: red;
 }
 
-.messages {
-  padding: 10px;
+.message {
+  color: rgb(76, 0, 255);
 }
