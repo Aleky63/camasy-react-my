@@ -3,7 +3,7 @@ import s from "./MyPosts.module.css";
 
 import Post from "./Post/Post";
 
-function MyPosts() {
+function MyPosts(props) {
   let postData = [
     {
       name: "QQQ _",

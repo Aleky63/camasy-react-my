@@ -1,7 +1,7 @@
 import React from "react";
 import s from "./ProfileInfo.module.css";
 
-function ProfileInfo() {
+function ProfileInfo(props) {
   return (
     <div>
       <div className="">
