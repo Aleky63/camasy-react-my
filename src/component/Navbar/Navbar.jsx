@@ -21,6 +21,9 @@ function Navbar() {
       <div className={s.item}>
         <Link to="/settings">Settings</Link>
       </div>
+      <div className={s.item}>
+        <Link to="/friends">Friends</Link>
+      </div>
     </nav>
   );
 }
