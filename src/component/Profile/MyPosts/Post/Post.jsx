@@ -11,7 +11,6 @@ function Post(props) {
       {props.message}
 
       <div className={s.descr}>
-        <div>{props.name}</div>
         <span>like</span>
         {props.likesCount}
       </div>

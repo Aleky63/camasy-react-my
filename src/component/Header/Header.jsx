@@ -1,5 +1,4 @@
-/* eslint-disable jsx-a11y/img-redundant-alt */
-import React from "react";
+// import React from "react";
 
 import s from "./Header.module.css";
 

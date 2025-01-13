@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import "./App.css";
 
 import Header from "./component/Header/Header";
@@ -9,39 +9,36 @@ import News from "./component/News/News";
 import Music from "./component/Music/Music";
 import Settings from "./component/Settings/Settings";
 import Friends from "./component/Friends/Friends";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 const App = (props) => {
   return (
-    <BrowserRouter>
-      <div className="app-wrapper">
-        <Header />
-        <Navbar />
-        <div className="app-wrapper-content">
-          <Routes>
-            <Route
-              path="/dialogs"
-              element={
-                <Dialogs
-                  state={props.state.dialogsPage}
-                  // dialogs={props.state.dialogsPage.dialogs}
-                  // messages={props.state.dialogsPage.messages}
-                />
-              }
-            />
-            <Route
-              path="/profile"
-              element={<Profile state={props.state.profilePage} />}
-            />
+    <div className="app-wrapper">
+      <Header />
+      <Navbar />
+      <div className="app-wrapper-content">
+        <Routes>
+          <Route
+            path="/dialogs"
+            element={<Dialogs state={props.state.dialogsPage} />}
+          />
+          <Route
+            path="/profile"
+            element={
+              <Profile
+                state={props.state.profilePage}
+                addPost={props.addPost}
+              />
+            }
+          />
 
-            <Route path="/news" element={<News />} />
-            <Route path="/music" element={<Music />} />
-            <Route path="/settings" element={<Settings />} />
-            <Route path="/friends" element={<Friends />} />
-          </Routes>
-        </div>
+          <Route path="/news" element={<News />} />
+          <Route path="/music" element={<Music />} />
+          <Route path="/settings" element={<Settings />} />
+          <Route path="/friends" element={<Friends />} />
+        </Routes>
       </div>
-    </BrowserRouter>
+    </div>
   );
 };
 
