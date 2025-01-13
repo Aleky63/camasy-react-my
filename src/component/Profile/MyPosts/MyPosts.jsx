@@ -1,4 +1,6 @@
 import React from "react";
+import { useRef } from "react";
+
 import s from "./MyPosts.module.css";
 import Post from "./Post/Post";
 // import { addPost } from "../../../redux/state";
@@ -7,7 +9,7 @@ function MyPosts(props) {
   let postsElements = props.posts.map((post) => (
     <Post likesCount={post.likesCount} message={post.message} key={post.id} />
   ));
-  let newPostElement = React.createRef();
+  let newPostElement = useRef();
 
   let addPost = () => {
     let text = newPostElement.current.value;
