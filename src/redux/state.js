@@ -18,6 +18,11 @@ let state = {
         message: "It's, my first are mess",
         likesCount: 51,
       },
+      {
+        id: 4,
+        message: "Parsing error: Unexpected token",
+        likesCount: 222,
+      },
     ],
   },
   dialogsPage: {
@@ -79,7 +84,7 @@ let state = {
 
 export let addPost = (postMessage) => {
   let newPost = {
-    id: 4,
+    id: 5,
     message: postMessage,
     likesCount: 0,
   };
