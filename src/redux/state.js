@@ -1,110 +1,114 @@
-let rerenderEntireTree = () => {
-  console.log("change");
-};
-
-let state = {
-  profilePage: {
-    posts: [
-      {
-        id: 1,
-        message: "Hi, how are you gy",
-        likesCount: 9,
-      },
-      {
-        id: 2,
-        message: "It's, my first are messagesss",
-        likesCount: 251,
-      },
-      {
-        id: 3,
-        message: "It's, my first are mess",
-        likesCount: 51,
-      },
-      {
-        id: 4,
-        message: "Parsing error: Unexpected token",
-        likesCount: 222,
-      },
-    ],
-    newPostText: "",
+let store = {
+  _state: {
+    profilePage: {
+      posts: [
+        {
+          id: 1,
+          message: "Hi, how are you gy",
+          likesCount: 9,
+        },
+        {
+          id: 2,
+          message: "It's, my first are messagesss",
+          likesCount: 251,
+        },
+        {
+          id: 3,
+          message: "It's, my first are mess",
+          likesCount: 56,
+        },
+        {
+          id: 4,
+          message: "Parsing error: Unexpected token",
+          likesCount: 222,
+        },
+      ],
+      newPostText: "",
+    },
+    dialogsPage: {
+      dialogs: [
+        {
+          id: 1,
+          name: "Aleky",
+        },
+        {
+          id: 2,
+          name: "Maksim",
+        },
+        {
+          id: 3,
+          name: " Katya",
+        },
+        {
+          id: 4,
+          name: "Anna",
+        },
+        {
+          id: 5,
+          name: "Sasha",
+        },
+        {
+          id: 6,
+          name: "Masha",
+        },
+      ],
+      messages: [
+        {
+          id: 1,
+          message: "Hi",
+        },
+        {
+          id: 2,
+          message: "How is your cycycycy",
+        },
+        {
+          id: 3,
+          message: "Dood day",
+        },
+        {
+          id: 4,
+          message: "Yo",
+        },
+        {
+          id: 5,
+          message: "Yoiiiitt",
+        },
+        {
+          id: 6,
+          message: "Yozzzzz",
+        },
+      ],
+    },
+    sidebar: {},
   },
-  dialogsPage: {
-    dialogs: [
-      {
-        id: 1,
-        name: "Aleky",
-      },
-      {
-        id: 2,
-        name: "Maksim",
-      },
-      {
-        id: 3,
-        name: " Katya",
-      },
-      {
-        id: 4,
-        name: "Anna",
-      },
-      {
-        id: 5,
-        name: "Sasha",
-      },
-      {
-        id: 6,
-        name: "Masha",
-      },
-    ],
-    messages: [
-      {
-        id: 1,
-        message: "Hi",
-      },
-      {
-        id: 2,
-        message: "How is your cycycycy",
-      },
-      {
-        id: 3,
-        message: "Dood day",
-      },
-      {
-        id: 4,
-        message: "Yo",
-      },
-      {
-        id: 5,
-        message: "Yoiiiitt",
-      },
-      {
-        id: 6,
-        message: "Yozzzzz",
-      },
-    ],
+
+  _callSubscriber() {
+    console.log("change");
   },
-  sidebar: {},
+  getState() {
+    return this._state;
+  },
+  subscribe(observer) {
+    this._callSubscriber = observer;
+  },
+
+  dispatch(action) {
+    if (action.type === "ADD-POST") {
+      let newPost = {
+        id: 5,
+        message: this._state.profilePage.newPostText,
+        likesCount: 0,
+      };
+
+      this._state.profilePage.posts.push(newPost);
+      this._state.profilePage.newPostText = "";
+      this._callSubscriber(this._state);
+    } else if (action.type === "UPDATE-NEW-POST-TEXT") {
+      this._state.profilePage.newPostText = action.newText;
+      this._callSubscriber(this._state);
+    }
+  },
 };
 
-window.state = state;
-
-export const addPost = () => {
-  let newPost = {
-    id: 5,
-    message: state.profilePage.newPostText,
-    likesCount: 0,
-  };
-
-  state.profilePage.posts.push(newPost);
-  state.profilePage.newPostText = "";
-  rerenderEntireTree(state);
-};
-
-export const updateNewPostText = (newText) => {
-  state.profilePage.newPostText = newText;
-  rerenderEntireTree(state);
-};
-export const subscribe = (observer) => {
-  rerenderEntireTree = observer;
-};
-
-export default state;
+export default store;
+window.store = store;

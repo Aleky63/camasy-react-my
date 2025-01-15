@@ -12,14 +12,12 @@ function MyPosts(props) {
   let newPostElement = useRef();
 
   let addPost = () => {
-    props.addPost();
-    // props.updateNewPostText("");
-    // newPostElement.current.value = "";
+    props.dispatch({ type: "ADD-POST" });
   };
 
   let onPostChange = () => {
     let text = newPostElement.current.value;
-    props.updateNewPostText(text);
+    props.dispatch({ type: "UPDATE-NEW-POST-TEXT", newText: text });
   };
 
   return (
@@ -34,11 +32,6 @@ function MyPosts(props) {
           />
         </div>
 
-        {/* <div>
-          <button onClick={() => addPost(newPostElement.current.value)}>
-            Add post
-          </button>
-        </div> */}
         <div>
           <button onClick={addPost}>Add post</button>
         </div>
