@@ -1,3 +1,6 @@
+const ADD_POST = "ADD-POST";
+const UPDATE_NEW_POST_TEXT = "UPDATE-NEW-POST-TEXT";
+
 let store = {
   _state: {
     profilePage: {
@@ -15,7 +18,7 @@ let store = {
         {
           id: 3,
           message: "It's, my first are mess",
-          likesCount: 56,
+          likesCount: 36,
         },
         {
           id: 4,
@@ -108,6 +111,20 @@ let store = {
       this._callSubscriber(this._state);
     }
   },
+};
+
+// export const addPostActionCreator = () => {
+//   return {
+//     type: ADD_POST,
+//   };
+// };
+export const addPostActionCreator = () => ({ type: ADD_POST });
+
+export const updatePostTextActionCreator = (text) => {
+  return {
+    type: UPDATE_NEW_POST_TEXT,
+    newText: text,
+  };
 };
 
 export default store;
