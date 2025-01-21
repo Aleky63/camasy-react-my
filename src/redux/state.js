@@ -13,7 +13,7 @@ let store = {
         {
           id: 2,
           message: "It's, my first are messagesss",
-          likesCount: 235,
+          likesCount: 214,
         },
         {
           id: 3,
