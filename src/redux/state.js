@@ -1,5 +1,5 @@
-const ADD_POST = "ADD-POST";
-const UPDATE_NEW_POST_TEXT = "UPDATE-NEW-POST-TEXT";
+const ADD_POST = "ADD_POST";
+const UPDATE_NEW_POST_TEXT = "UPDATE_NEW_POST_TEXT";
 
 const UPDATE_NEW_MESSAGE_BODY = "UPDATE_NEW_MESSAGE_BODY";
 const SEND_MESSAGE = "SEND_MESSAGE";
@@ -27,6 +27,7 @@ let store = {
       newPostText: "",
     },
     dialogsPage: {
+      newMessageBody: "",
       dialogs: [
         {
           id: 1,
@@ -75,7 +76,6 @@ let store = {
           message: "Yoiiiitgjgffgojfgf",
         },
       ],
-      newMessageBody: "",
     },
     sidebar: {},
   },
@@ -108,7 +108,7 @@ let store = {
       this._state.dialogsPage.newMessageBody = action.body;
       this._callSubscriber(this._state);
     } else if (action.type === SEND_MESSAGE) {
-      let body = (this._state.dialogsPage.newMessageBody = action.body);
+      let body = this._state.dialogsPage.newMessageBody;
       this._state.dialogsPage.newMessageBody = "";
       this._state.dialogsPage.messages.push({ id: 6, message: body });
       this._callSubscriber(this._state);

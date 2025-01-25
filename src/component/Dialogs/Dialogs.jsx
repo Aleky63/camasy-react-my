@@ -21,8 +21,8 @@ function Dialogs(props) {
   let onSendMessageClick = () => {
     props.store.dispatch(sendMessageCreator());
   };
-  let onNewMessageChange = (e) => {
-    let body = e.target.value;
+  let onNewMessageChange = (event) => {
+    let body = event.target.value;
     props.store.dispatch(updateNewMessageBodyCreator(body));
   };
 
