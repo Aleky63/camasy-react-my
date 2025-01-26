@@ -3,9 +3,9 @@ import { useRef } from "react";
 import s from "./MyPosts.module.css";
 import Post from "./Post/Post";
 import {
-  updatePostTextActionCreator,
+  updateNewPostTextActionCreator,
   addPostActionCreator,
-} from "../../../redux/state";
+} from "../../../redux/profileReducer";
 
 function MyPosts(props) {
   let postsElements = props.posts.map((post) => (
@@ -20,7 +20,7 @@ function MyPosts(props) {
   let onPostChange = () => {
     let text = newPostElement.current.value;
 
-    props.dispatch(updatePostTextActionCreator(text));
+    props.dispatch(updateNewPostTextActionCreator(text));
   };
 
   return (
