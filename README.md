@@ -78,5 +78,5 @@ npm i
 
 npm start
 
-<!--если ошибка то установить  web-vitals в devDependencies -->
-<!-- npm install --save-dev web-vitals -->
+если ошибка то установить web-vitals в devDependencies -->
+npm install --save-dev web-vitals
