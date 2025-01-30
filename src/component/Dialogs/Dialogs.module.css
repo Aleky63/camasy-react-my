@@ -9,7 +9,7 @@
   row-gap: 2px;
 }
 .dialogsItems {
-  padding-left: 10px;
+  padding-left: 12px;
 }
 .dialogs img {
   height: 24px;
@@ -17,7 +17,7 @@
   border-radius: 40%;
 }
 .dialogsItems .active {
-  color: rgb(248, 8, 8);
+  color: rgb(236, 27, 27);
 }
 
 .message {
