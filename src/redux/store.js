@@ -16,11 +16,6 @@ let store = {
           message: "It's, my first are messagesss",
           likesCount: 214,
         },
-        // {
-        //   id: 3,
-        //   message: "It's, my first are mess",
-        //   likesCount: 36,
-        // },
       ],
       newPostText: "",
     },
