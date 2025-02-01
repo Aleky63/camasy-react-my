@@ -8,6 +8,6 @@ let reducers = combineReducers({
   dialogsPage: dialogsReducer,
 });
 
-let store = createStore({ reducer: reducers });
+let store = createStore(reducers);
 
 export default store;

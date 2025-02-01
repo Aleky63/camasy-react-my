@@ -2,7 +2,6 @@ const UPDATE_NEW_MESSAGE_BODY = "UPDATE_NEW_MESSAGE_BODY";
 const SEND_MESSAGE = "SEND_MESSAGE";
 
 let initialState = {
-  newMessageBody: "",
   dialogs: [
     {
       id: 1,
@@ -51,6 +50,7 @@ let initialState = {
       message: "Yoiiiitgjgffgojfgf",
     },
   ],
+  newMessageBody: "",
 };
 
 const dialogsReducer = (state = initialState, action) => {
