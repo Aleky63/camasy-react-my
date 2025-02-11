@@ -1,5 +1,4 @@
 import React from "react";
-
 import MyPosts from "./MyPosts";
 import {
   updateNewPostTextActionCreator,
@@ -15,7 +14,6 @@ function MyPostsContainer(props) {
 
   let onPostChange = (text) => {
     let action = updateNewPostTextActionCreator(text);
-
     props.store.dispatch(action);
   };
 

@@ -9,9 +9,8 @@ import Post from "./Post/Post";
 
 function MyPosts(props) {
   let postsElements = props.posts.map((post) => (
-    <Post message={post.message} likesCount={post.likesCount} />
+    <Post likesCount={post.likesCount} message={post.message} key={post.id} />
   ));
-
   let newPostElement = useRef();
 
   let onAddPost = () => {

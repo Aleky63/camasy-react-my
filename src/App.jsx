@@ -1,6 +1,5 @@
 // import React from "react";
 import "./App.css";
-
 import Header from "./component/Header/Header";
 import Navbar from "./component/Navbar/Navbar";
 import Profile from "./component/Profile/Profile";
@@ -23,8 +22,7 @@ const App = (props) => {
             path="/profile"
             element={
               <Profile
-                profilePage={props.state.profilePage}
-                dispatch={props.dispatch}
+                store={props.store}
               />
             }
           />
