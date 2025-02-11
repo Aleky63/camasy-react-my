@@ -3,12 +3,13 @@ import "./App.css";
 import Header from "./component/Header/Header";
 import Navbar from "./component/Navbar/Navbar";
 import Profile from "./component/Profile/Profile";
-import Dialogs from "./component/Dialogs/Dialogs";
+// import Dialogs from "./component/Dialogs/Dialogs";
 import News from "./component/News/News";
 import Music from "./component/Music/Music";
 import Settings from "./component/Settings/Settings";
 import Friends from "./component/Friends/Friends";
 import { Routes, Route } from "react-router-dom";
+import DialogsContainer from "./component/Dialogs/DialogsContainer";
 
 const App = (props) => {
   return (
@@ -17,15 +18,11 @@ const App = (props) => {
       <Navbar />
       <div className="app-wrapper-content">
         <Routes>
-          <Route path="/dialogs" element={<Dialogs store={props.store} />} />
           <Route
-            path="/profile"
-            element={
-              <Profile
-                store={props.store}
-              />
-            }
+            path="/dialogs"
+            element={<DialogsContainer store={props.store} />}
           />
+          <Route path="/profile" element={<Profile store={props.store} />} />
 
           <Route path="/news" element={<News />} />
           <Route path="/music" element={<Music />} />
