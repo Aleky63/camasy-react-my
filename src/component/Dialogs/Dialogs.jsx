@@ -1,10 +1,6 @@
 import s from "./Dialogs.module.css";
 import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
-// import {
-//   updateNewMessageBodyCreator,
-//   sendMessageCreator,
-// } from "../../redux/dialogsReducer";
 
 function Dialogs(props) {
   let state = props.dialogsPage;
@@ -24,7 +20,6 @@ function Dialogs(props) {
   let onNewMessageChange = (event) => {
     let body = event.target.value;
     props.updateNewMessageBody(body);
-    // props.store.dispatch(updateNewMessageBodyCreator(body));
   };
 
   return (
