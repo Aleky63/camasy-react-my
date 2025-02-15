@@ -6,7 +6,7 @@ let initialState = {
     {
       id: 1,
       message: "Hi, how are you gy",
-      likesCount: 9,
+      likesCount: 29,
     },
     {
       id: 2,
