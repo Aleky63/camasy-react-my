@@ -20,7 +20,7 @@ function MyPosts(props) {
 
   return (
     <div className={s.posts}>
-      <h3>My posts</h3>
+      <h3>My beautiful posts</h3>
       <div className={s.cart}>
         <div>
           <textarea
